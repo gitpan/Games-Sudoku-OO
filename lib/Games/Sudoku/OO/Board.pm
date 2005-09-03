@@ -9,78 +9,7 @@ use Games::Sudoku::OO::Set::Square;
 use Games::Sudoku::OO::Cell;
 use Carp;
 
-our $VERSION = "0.01";
-
-=head1 NAME
-
-Games::Sudoku::OO::Board - Object oriented Sudoku solver
-
-=head1 SYNOPSIS
-
-  use Games::Sudoku::OO::Board;
-  my $board = Sudoku::OO::Board->new();
-  $board->importGrid($txt_grid);
-
-  print $board->toStr;
-
-  # Tell Row 1 to solve itself as much as it can
-  $board->solveRow(1);
-  print $board->toStr;
-
-  # Solve the whole board
-  $board->solveAll;
-  print $board->toStr;
-
-
-
-=head1 DESCRIPTION
-
-Games::Sudoku::OO takes an object oriented approach to solving Sudoku,
-representing the column, row and square as derivatives of a base Set
-class, which encapsulates the solving rules. The Board class is also
-composed of cells (which know what set they are in) and is only
-responsible for loading and updating the cells and interacting with
-the users. The sets themselves do the solving.
-
-=head1 USAGE
-
-
-
-=head1 BUGS
-
-- Doesn't solve all boards
-- Display of unsolved boards is a bit odd
-
-
-=head1 SUPPORT
-
-- Email me
-
-
-=head1 AUTHOR
-
-	Michael Cope
-	CPAN ID: COPE
-	
-	cpan@copito.org
-	http://www.copito.org/perl
-
-=head1 COPYRIGHT
-
-This program is free software; you can redistribute
-it and/or modify it under the same terms as Perl itself.
-
-The full text of the license can be found in the
-LICENSE file included with this module.
-
-
-=head1 SEE ALSO
-
-Sudoku::Games::OO::Set Sudoku::Games::OO::Cell
-
-=cut
-
-
+our $VERSION = "0.02";
 
 sub new {
     my $proto = shift;
@@ -193,3 +122,76 @@ sub solveAll {
     return not $unsolved;
 }
 1;
+
+__END__
+
+=head1 NAME
+
+Games::Sudoku::OO::Board - Object oriented Sudoku solver
+
+=head1 SYNOPSIS
+
+  use Games::Sudoku::OO::Board;
+  my $board = Sudoku::OO::Board->new();
+  $board->importGrid($txt_grid);
+
+  print $board->toStr;
+
+  # Tell Row 1 to solve itself as much as it can
+  $board->solveRow(1);
+  print $board->toStr;
+
+  # Solve the whole board
+  $board->solveAll;
+  print $board->toStr;
+
+
+
+=head1 DESCRIPTION
+
+Games::Sudoku::OO takes an object oriented approach to solving Sudoku,
+representing the column, row and square as derivatives of a base Set
+class, which encapsulates the solving rules. The Board class is also
+composed of cells (which know what set they are in) and is only
+responsible for loading and updating the cells and interacting with
+the users. The sets themselves do the solving.
+
+=head1 USAGE
+
+
+
+=head1 BUGS
+
+- Doesn't solve all boards
+- Display of unsolved boards is a bit odd
+
+
+=head1 SUPPORT
+
+- Email me
+
+
+=head1 AUTHOR
+
+Michael Cope
+CPAN ID: COPE
+	
+cpan@copito.org
+http://www.copito.org/perl
+
+=head1 COPYRIGHT
+
+This program is free software; you can redistribute
+it and/or modify it under the same terms as Perl itself.
+
+The full text of the license can be found in the
+LICENSE file included with this module.
+
+
+=head1 SEE ALSO
+
+Games::Sudoku::OO::Set Games::Sudoku::OO::Cell
+
+=cut
+
+

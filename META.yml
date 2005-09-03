@@ -1,0 +1,9 @@
+--- #YAML:1.0
+name: Games-Sudoku-OO
+version: 0.02
+author:
+  - cpan@copito.org
+http://www.copito.org/perl
+abstract: Object oriented Sudoku solver
+license: perl
+generated_by: Module::Build version 0.2611, without YAML.pm

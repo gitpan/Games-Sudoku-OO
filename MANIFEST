@@ -4,6 +4,7 @@ LICENSE
 MANIFEST
 Makefile.PL
 README
+META.yml
 Todo
 lib/Games/Sudoku/OO/Board.pm
 lib/Games/Sudoku/OO/Cell.pm

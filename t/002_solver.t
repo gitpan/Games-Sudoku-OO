@@ -40,9 +40,9 @@ sub test {
 	local $TODO = 
 	  ( $todo{basename($board_file)}{solved} ) || undef;
       SKIP:{
-	skip "need to generate ${board_file}.solved", 1 unless -f "${board_file}.solved";
+	skip "need to generate ${board_file}.solution", 1 unless -f "${board_file}.solution";
 	
-	open(my $fh, "${board_file}.solved");
+	open(my $fh, "${board_file}.solution");
 	local $/ = undef;
 	my $solved = <$fh>;
 	close $fh;
